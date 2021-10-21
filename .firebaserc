@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "shagunshrutiapp": {
+      "hosting": {
+        "ShagunShrutiApp": [
+          "shagunshrutiapp"
+        ]
+      }
+    }
+  }
+}
