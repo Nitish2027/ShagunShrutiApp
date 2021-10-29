@@ -2,7 +2,7 @@ import { Injectable, NgZone } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import {Router} from "@angular/router";
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { AlertService } from './alert.service';
 
 @Injectable({
@@ -35,7 +35,6 @@ export class FirebaseService {
     .then((user)=>{
       this.firestore.collection("users").ref.where("username", "==", user.user.email).onSnapshot(snap =>{
         snap.forEach(userRef => {
-          console.log("userRef", userRef.data());
           this.currentUser = userRef.data();
           //setUserStatus
           this.setUserStatus(this.currentUser)
@@ -44,31 +43,30 @@ export class FirebaseService {
             this.alertService.success('Admin Logged In Successfully!!', this.options);
           }else if (userRef.get('role') == "tenant" && userRef.get('status') == true){
             this.router.navigate(["/tenant"]);
-            this.alertService.success('You Are Logged In Successfully!!', this.options);
+            this.alertService.success('User Logged In Successfully!!', this.options);
           }else{
             this.router.navigate(["/home"]);
-            this.alertService.info('Your ID is disabled. Please contact support!!', this.options);
+            this.alertService.info('Your ID is disabled. Please contact the Admin!!', this.options);
           }
         })
       })
     }).catch((err) => {
       this.alertService.error(err.message, this.options);
-      console.log(err);
     })
 }
 
 logOut(){
   this.afAuth.signOut()
   .then(()=>{
-    console.log("user signed Out successfully");
     //set current user to null to be logged out
     this.currentUser = null;
     //set the listenener to be null, for the UI to react
     this.setUserStatus(null);
     this.ngZone.run(() => this.router.navigate(["/home"]));
+    this.alertService.success('User Logged Out!!', this.options);
 
   }).catch((err) => {
-    console.log(err);
+    this.alertService.error(err.message, this.options);
   })
 }
 

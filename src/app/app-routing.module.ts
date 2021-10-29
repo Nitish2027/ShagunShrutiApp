@@ -14,29 +14,24 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: '',
-    component: AppComponent,
-    children: [
-    {
-      path: 'home',
-      component: HomeComponent,
-    },
-    {
-      path: 'login',
-      component: LoginComponent,
-    },
-    {
-      path: 'admin',
-      component: AdminComponent,
-      canActivate:[AuthGuard], data: {roles: ["admin"]},
-    },
-    {
-      path: 'tenant',
-      component: TenantComponent,
-      canActivate:[AuthGuard], data: {roles: ["tenant", "admin"]}
-    },
-    ]
-  }];
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    canActivate:[AuthGuard], data: {roles: ["admin"]},
+  },
+  {
+    path: 'tenant',
+    component: TenantComponent,
+    canActivate:[AuthGuard], data: {roles: ["tenant", "admin"]}
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled'})],
