@@ -3,17 +3,27 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import {Router} from "@angular/router";
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable, BehaviorSubject } from 'rxjs';
+import { AlertService } from './alert.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirebaseService {
 
-  constructor(private ngZone: NgZone, private afAuth: AngularFireAuth, private firestore: AngularFirestore , private router: Router) { }
+  constructor(private ngZone: NgZone,
+              private afAuth: AngularFireAuth,
+              private firestore: AngularFirestore ,
+              private router: Router,
+              protected alertService: AlertService) { }
 
   public currentUser: any;
   public userStatus: string;
   public userStatusChanges: BehaviorSubject<string> = new BehaviorSubject<string>((this as this).userStatus);
+
+  options = {
+    autoClose: true,
+    keepAfterRouteChange: true
+  };
 
   setUserStatus(userStatus: any): void {
     this.userStatus = userStatus;
@@ -29,17 +39,20 @@ export class FirebaseService {
           this.currentUser = userRef.data();
           //setUserStatus
           this.setUserStatus(this.currentUser)
-          if(userRef.get('role') == "admin") {
+          if(userRef.get('role') == "admin" && userRef.get('status') == true) {
             this.router.navigate(["/admin"]);
-          }else if (userRef.get('role') == "tenant"){
+            this.alertService.success('Admin Logged In Successfully!!', this.options);
+          }else if (userRef.get('role') == "tenant" && userRef.get('status') == true){
             this.router.navigate(["/tenant"]);
+            this.alertService.success('You Are Logged In Successfully!!', this.options);
           }else{
             this.router.navigate(["/home"]);
+            this.alertService.info('Your ID is disabled. Please contact support!!', this.options);
           }
         })
       })
-
     }).catch((err) => {
+      this.alertService.error(err.message, this.options);
       console.log(err);
     })
 }

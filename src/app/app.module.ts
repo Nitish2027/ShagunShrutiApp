@@ -18,6 +18,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthGuard } from './guard/auth.guard';
 
+import { AlertService } from './services/alert.service';
+import { AlertModule } from './components/alert/alert.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,8 +37,9 @@ import { AuthGuard } from './guard/auth.guard';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    AlertModule,
   ],
-  providers: [FirebaseService, AuthGuard],
+  providers: [FirebaseService, AuthGuard, AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
