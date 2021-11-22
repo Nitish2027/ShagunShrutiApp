@@ -70,7 +70,6 @@ logOut(){
   })
 }
 
-
 userChanges(){
   this.afAuth.onAuthStateChanged(currentUser => {
     if(currentUser){

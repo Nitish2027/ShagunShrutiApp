@@ -31,14 +31,17 @@
 			<li data-target="#slides" data-slide-to="2"></li>
 		</ul>
 		<div class="carousel-inner" role="listbox">
-			<div class="carousel-item active" style="background-image: url(assets/img/slide1.jpg)">
+			<div class="carousel-item active" style="background-image: url(assets/img/slide/Slide1.png)">
 				<div class="carousel-caption text-center">
 					<h1 class="display-2"></h1>
 					<h3></h3>
 				</div>
 			</div>
-			<div class="carousel-item" style="background-image: url(assets/img/slide2.jpg)"></div>
-			<div class="carousel-item" style="background-image: url(assets/img/slide3.jpg)"></div>
+			<div class="carousel-item" style="background-image: url(assets/img/slide/Slide2.png)"></div>
+			<div class="carousel-item" style="background-image: url(assets/img/slide/Slide3.png)"></div>
+			<div class="carousel-item" style="background-image: url(assets/img/slide/Slide4.png)"></div>
+			<div class="carousel-item" style="background-image: url(assets/img/slide/Slide5.png)"></div>
+			<div class="carousel-item" style="background-image: url(assets/img/slide/Slide6.png)"></div>
 			<a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			</a>
@@ -136,10 +139,6 @@
 			</div>
 
 			<div class="col-md-3">
-				<p class="lead">Pet Friendly</p>
-			</div>
-
-			<div class="col-md-3">
 				<p class="lead">Party Hall</p>
 			</div>
 
@@ -169,160 +168,69 @@
 <div class="container px-0 py-4">
 	<div class="pp-category-filter">
 	  <div class="row">
-		<div class="col-sm-12"><a class="btn btn-primary pp-filter-button" href="#" data-filter="all">All</a><a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="interior">Interior</a><a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="exterior">Exterior</a><a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="1bhk">1 BHK</a><a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="2bhk">2 BHK</a></div>
+		<div class="col-sm-12">
+			<a class="btn btn-primary pp-filter-button" href="#" data-filter="all">All</a>
+			<a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="1bhk">1 BHK</a>
+			<a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="2bhk">2 BHK</a>
+			<a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="basement">Basement</a>
+			<a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="roof">Roof</a>
+			<a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="random">Random</a>
+			<a class="btn btn-outline-primary pp-filter-button" href="#" data-filter="party_hall">Party Hall</a>
+		</div>
 	  </div>
 	</div>
   </div>
   <div class="container px-0">
 	<div class="pp-gallery">
 	  <div class="card-columns">
-		<div class="card" data-groups="[&quot;exterior&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/exterior_1.jpg" alt="exterior"/>
+		<div *ngFor="let photo of data?.gallery" class="card" data-groups="[&quot;1bhk&quot;]">
+			<figure *ngIf="(photo.alt == '1bhk')" class="pp-effect"><img class="img-fluid" src="{{photo.src}}" alt="{{photo.alt}}"/>
 			  <figcaption>
-				<div class="h4">Front View</div>
-				<p>Exterior</p>
+				<div class="h4">{{photo.desc}}</div>
+				<p>{{photo.title}}</p>
 			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;exterior&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/exterior_2.jpg" alt="exterior"/>
+			</figure>
+		</div>
+		<div *ngFor="let photo of data?.gallery" class="card" data-groups="[&quot;2bhk&quot;]">
+			<figure *ngIf="(photo.alt == '2bhk')" class="pp-effect"><img class="img-fluid" src="{{photo.src}}" alt="{{photo.alt}}"/>
 			  <figcaption>
-				<div class="h4">Front View</div>
-				<p>Exterior</p>
+				<div class="h4">{{photo.desc}}</div>
+				<p>{{photo.title}}</p>
 			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;exterior&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/exterior_3.jpg" alt="exterior"/>
+			</figure>
+		</div>
+		<div *ngFor="let photo of data?.gallery" class="card" data-groups="[&quot;basement&quot;]">
+			<figure *ngIf="(photo.alt == 'basement')" class="pp-effect"><img class="img-fluid" src="{{photo.src}}" alt="{{photo.alt}}"/>
 			  <figcaption>
-				<div class="h4">Sunrise View</div>
-				<p>Exterior</p>
+				<div class="h4">{{photo.desc}}</div>
+				<p>{{photo.title}}</p>
 			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;exterior&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/exterior_4.jpg" alt="exterior"/>
+			</figure>
+		</div>
+		<div *ngFor="let photo of data?.gallery" class="card" data-groups="[&quot;roof&quot;]">
+			<figure *ngIf="(photo.alt == 'roof')" class="pp-effect"><img class="img-fluid" src="{{photo.src}}" alt="{{photo.alt}}"/>
 			  <figcaption>
-				<div class="h4">Greenery</div>
-				<p>Exterior</p>
+				<div class="h4">{{photo.desc}}</div>
+				<p>{{photo.title}}</p>
 			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;exterior&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/exterior_5.jpg" alt="exterior"/>
+			</figure>
+		</div>
+		<div *ngFor="let photo of data?.gallery" class="card" data-groups="[&quot;random&quot;]">
+			<figure *ngIf="(photo.alt == 'random')" class="pp-effect"><img class="img-fluid" src="{{photo.src}}" alt="{{photo.alt}}"/>
 			  <figcaption>
-				<div class="h4">Side View</div>
-				<p>Exterior</p>
+				<div class="h4">{{photo.desc}}</div>
+				<p>{{photo.title}}</p>
 			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;interior&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/interior_1.jpg" alt="interior"/>
+			</figure>
+		</div>
+		<div *ngFor="let photo of data?.gallery" class="card" data-groups="[&quot;party_hall&quot;]">
+			<figure *ngIf="(photo.alt == 'party_hall')" class="pp-effect"><img class="img-fluid" src="{{photo.src}}" alt="{{photo.alt}}"/>
 			  <figcaption>
-				<div class="h4">Inside View</div>
-				<p>Interior</p>
+				<div class="h4">{{photo.desc}}</div>
+				<p>{{photo.title}}</p>
 			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;interior&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/interior_2.jpg" alt="interior"/>
-			  <figcaption>
-				<div class="h4">Staircase</div>
-				<p>Interior</p>
-			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;interior&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/interior_3.jpg" alt="interior"/>
-			  <figcaption>
-				<div class="h4">Party Hall</div>
-				<p>Interior</p>
-			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;interior&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/interior_4.jpg" alt="interior"/>
-			  <figcaption>
-				<div class="h4">Elevator</div>
-				<p>Interior</p>
-			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;1bhk&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/1bhk_bathroom_1.jpg" alt="1bhk"/>
-			  <figcaption>
-				<div class="h4">Bathroom</div>
-				<p>1 BHK</p>
-			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;1bhk&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/1bhk_kitchen_1.jpg" alt="1bhk"/>
-			  <figcaption>
-				<div class="h4">Kitchen</div>
-				<p>1 BHK</p>
-			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;1bhk&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/1bhk_living_room_1.jpg" alt="1bhk"/>
-			  <figcaption>
-				<div class="h4">Living Room</div>
-				<p>1 BHK</p>
-			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;1bhk&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/1bhk_living_room_2.jpg" alt="1bhk"/>
-			  <figcaption>
-				<div class="h4">Living Room</div>
-				<p>1 BHK</p>
-			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;1bhk&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/1bhk_living_room_3.jpg" alt="1bhk"/>
-			  <figcaption>
-				<div class="h4">Living Room</div>
-				<p>1 BHK</p>
-			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;2bhk&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/2bhk_bedroom1_1.jpg" alt="2bhk"/>
-			  <figcaption>
-				<div class="h4">Bedroom</div>
-				<p>2 BHK</p>
-			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;2bhk&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/2bhk_bedroom2_1.jpg" alt="2bhk"/>
-			  <figcaption>
-				<div class="h4">Bedroom</div>
-				<p>2 BHK</p>
-			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;2bhk&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/2bhk_kitchen_1.jpg" alt="2bhk"/>
-			  <figcaption>
-				<div class="h4">Kitchen</div>
-				<p>2 BHK</p>
-			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;2bhk&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/2bhk_living_room_1.jpg" alt="2bhk"/>
-			  <figcaption>
-				<div class="h4">Living Room</div>
-				<p>2 BHK</p>
-			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;2bhk&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/2bhk_main_entrance_1.jpg" alt="2bhk"/>
-			  <figcaption>
-				<div class="h4">Main Entrance</div>
-				<p>2 BHK</p>
-			  </figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;2bhk&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/2bhk_bathroom_1.jpg" alt="2bhk"/>
-				<figcaption>
-				<div class="h4">Bathroom</div>
-				<p>2 BHK</p>
-				</figcaption>
-			</figure></div>
-		<div class="card" data-groups="[&quot;2bhk&quot;]">
-			<figure class="pp-effect"><img class="img-fluid" src="assets/img/gallery/2bhk_bathroom_2.jpg" alt="2bhk"/>
-				<figcaption>
-				<div class="h4">Bathroom</div>
-				<p>2 BHK</p>
-				</figcaption>
-			</figure></div>
+			</figure>
+		</div>
 	  </div>
 	</div>
   </div>
@@ -392,4 +300,4 @@
 	</footer>
 
 </div>
-<!-- End Contact Section-->
+<!-- End About Section-->

@@ -11,11 +11,14 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { FirebaseService } from './services/firebase.service';
 import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 //angularfire
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from "@angular/fire/storage";
+import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { AuthGuard } from './guard/auth.guard';
 
 import { AlertService } from './services/alert.service';
@@ -35,9 +38,12 @@ import { AlertModule } from './components/alert/alert.module';
     ReactiveFormsModule,
     CommonModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
     AngularFirestoreModule,
     AngularFireAuthModule,
     AlertModule,
+    HttpClientModule
   ],
   providers: [FirebaseService, AuthGuard, AlertService],
   bootstrap: [AppComponent]

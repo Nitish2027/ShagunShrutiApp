@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
+import { HttpClient } from "@angular/common/http";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,11 +8,15 @@ import { ViewportScroller } from '@angular/common';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private viewportScroller: ViewportScroller) { }
+  data:any;
+  constructor(private viewportScroller: ViewportScroller, private httpClient: HttpClient) { }
 
   ngOnInit(): void {
     this.loadScript("assets/js/jquery.min.js");
     this.loadScript("assets/js/gallery.js");
+    this.httpClient.get<any>("assets/data/data.json").subscribe((data)=>
+    this.data = data
+  )
   }
 
   public onClick(elementId: string): void {

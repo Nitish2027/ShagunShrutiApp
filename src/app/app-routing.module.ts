@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -29,7 +28,7 @@ const routes: Routes = [
   {
     path: 'tenant',
     component: TenantComponent,
-    canActivate:[AuthGuard], data: {roles: ["tenant", "admin"]}
+    //canActivate:[AuthGuard], data: {roles: ["tenant", "admin"]}
   },
 ];
 

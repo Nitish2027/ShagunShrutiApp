@@ -1,0 +1,286 @@
+﻿{
+    "gallery": [
+        {
+            "alt": "1bhk",
+            "src": "assets/img/gallery/1bhk/1bhk_balcony.jpg",
+            "title": "1BHK",
+            "desc": "Balcony View"
+        },
+        {
+            "alt": "1bhk",
+            "src": "assets/img/gallery/1bhk/1bhk_bathrrom.jpg",
+            "title": "1BHK",
+            "desc": "Bathroom"
+        },
+        {
+            "alt": "1bhk",
+            "src": "assets/img/gallery/1bhk/1bhk_entrance.jpg",
+            "title": "1BHK",
+            "desc": "Entrance"
+        },
+        {
+            "alt": "1bhk",
+            "src": "assets/img/gallery/1bhk/1bhk_hall1.jpg",
+            "title": "1BHK",
+            "desc": "Hall"
+        },
+        {
+            "alt": "1bhk",
+            "src": "assets/img/gallery/1bhk/1bhk_hall2.jpg",
+            "title": "1BHK",
+            "desc": "Hall"
+        },
+        {
+            "alt": "1bhk",
+            "src": "assets/img/gallery/1bhk/1bhk_kitchen1.jpg",
+            "title": "1BHK",
+            "desc": "Kitchen"
+        },
+        {
+            "alt": "1bhk",
+            "src": "assets/img/gallery/1bhk/1bhk_kitchen2.jpg",
+            "title": "1BHK",
+            "desc": "Kitchen"
+        },
+        {
+            "alt": "1bhk",
+            "src": "assets/img/gallery/1bhk/1bhk_room1.jpg",
+            "title": "1BHK",
+            "desc": "Room"
+        },
+        {
+            "alt": "1bhk",
+            "src": "assets/img/gallery/1bhk/1bhk_room2.jpg",
+            "title": "1BHK",
+            "desc": "Room"
+        },
+        {
+            "alt": "2bhk",
+            "src": "assets/img/gallery/2bhk/2bhk_balcony_hall1.jpg",
+            "title": "2BHK",
+            "desc": "Balcony View"
+        },
+        {
+            "alt": "2bhk",
+            "src": "assets/img/gallery/2bhk/2bhk_balcony_hall2.jpg",
+            "title": "2BHK",
+            "desc": "Balcony View"
+        },
+        {
+            "alt": "2bhk",
+            "src": "assets/img/gallery/2bhk/2bhk_balcony_room2.jpg",
+            "title": "2BHK",
+            "desc": "Balcony View"
+        },
+        {
+            "alt": "2bhk",
+            "src": "assets/img/gallery/2bhk/2bhk_bathrrom.jpg",
+            "title": "2BHK",
+            "desc": "Bathroom"
+        },
+        {
+            "alt": "2bhk",
+            "src": "assets/img/gallery/2bhk/2bhk_entrance.jpg",
+            "title": "2BHK",
+            "desc": "Entrance"
+        },
+        {
+            "alt": "2bhk",
+            "src": "assets/img/gallery/2bhk/2bhk_hall1.jpg",
+            "title": "2BHK",
+            "desc": "Hall"
+        },
+        {
+            "alt": "2bhk",
+            "src": "assets/img/gallery/2bhk/2bhk_hall2.jpg",
+            "title": "2BHK",
+            "desc": "Hall"
+        },
+        {
+            "alt": "2bhk",
+            "src": "assets/img/gallery/2bhk/2bhk_kitchen1.jpg",
+            "title": "2BHK",
+            "desc": "Kitchen"
+        },
+        {
+            "alt": "2bhk",
+            "src": "assets/img/gallery/2bhk/2bhk_kitchen2.jpg",
+            "title": "2BHK",
+            "desc": "Kitchen"
+        },
+        {
+            "alt": "2bhk",
+            "src": "assets/img/gallery/2bhk/2bhk_room1_1.jpg",
+            "title": "2BHK",
+            "desc": "Room 1"
+        },
+        {
+            "alt": "2bhk",
+            "src": "assets/img/gallery/2bhk/2bhk_room1_2.jpg",
+            "title": "2BHK",
+            "desc": "Room 1"
+        },
+        {
+            "alt": "2bhk",
+            "src": "assets/img/gallery/2bhk/2bhk_room2_1.jpg",
+            "title": "2BHK",
+            "desc": "Room 2"
+        },
+        {
+            "alt": "2bhk",
+            "src": "assets/img/gallery/2bhk/2bhk_room2_2.jpg",
+            "title": "2BHK",
+            "desc": "Room 2"
+        },
+        {
+            "alt": "2bhk",
+            "src": "assets/img/gallery/2bhk/2bhk_way_to_balcony.jpg",
+            "title": "2BHK",
+            "desc": "Balcony View"
+        },
+        {
+            "alt": "basement",
+            "src": "assets/img/gallery/basement/basement2.jpg",
+            "title": "Basement",
+            "desc": "Basement"
+        },
+        {
+            "alt": "basement",
+            "src": "assets/img/gallery/basement/basement3.jpg",
+            "title": "Basement",
+            "desc": "Basement"
+        },
+        {
+            "alt": "basement",
+            "src": "assets/img/gallery/basement/basment1.jpg",
+            "title": "Basement",
+            "desc": "Basement"
+        },
+        {
+            "alt": "basement",
+            "src": "assets/img/gallery/basement/exterior_basement_entry.jpg",
+            "title": "Basement",
+            "desc": "Basement"
+        },
+        {
+            "alt": "party_hall",
+            "src": "assets/img/gallery/party_hall/party_hall1.jpg",
+            "title": "Party Hall",
+            "desc": "Party Hall"
+        },
+        {
+            "alt": "party_hall",
+            "src": "assets/img/gallery/party_hall/party_hall2.jpg",
+            "title": "Party Hall",
+            "desc": "Party Hall"
+        },
+        {
+            "alt": "party_hall",
+            "src": "assets/img/gallery/party_hall/party_hall3.jpg",
+            "title": "Party Hall",
+            "desc": "Party Hall"
+        },
+        {
+            "alt": "party_hall",
+            "src": "assets/img/gallery/party_hall/party_hall4.jpg",
+            "title": "Party Hall",
+            "desc": "Party Hall"
+        },
+        {
+            "alt": "random",
+            "src": "assets/img/gallery/random/corridor1.jpg",
+            "title": "Interior",
+            "desc": "Corridor"
+        },
+        {
+            "alt": "random",
+            "src": "assets/img/gallery/random/corridor2.jpg",
+            "title": "Interior",
+            "desc": "Corridor"
+        },
+        {
+            "alt": "random",
+            "src": "assets/img/gallery/random/corridor3.jpg",
+            "title": "Interior",
+            "desc": "Corridor"
+        },
+        {
+            "alt": "random",
+            "src": "assets/img/gallery/random/corridor4.jpg",
+            "title": "Interior",
+            "desc": "Corridor"
+        },
+        {
+            "alt": "random",
+            "src": "assets/img/gallery/random/exterior_front1.jpg",
+            "title": "Exterior",
+            "desc": "Front View"
+        },
+        {
+            "alt": "random",
+            "src": "assets/img/gallery/random/interior_staircase.jpg",
+            "title": "Interior",
+            "desc": "Staircase"
+        },
+        {
+            "alt": "random",
+            "src": "assets/img/gallery/random/interior_staircase2.jpg",
+            "title": "Interior",
+            "desc": "Staircase"
+        },
+        {
+            "alt": "roof",
+            "src": "assets/img/gallery/roof/roof_view1.jpg",
+            "title": "Roof",
+            "desc": "Roof"
+        },
+        {
+            "alt": "roof",
+            "src": "assets/img/gallery/roof/roof_view2.jpg",
+            "title": "Roof",
+            "desc": "Roof"
+        },
+        {
+            "alt": "roof",
+            "src": "assets/img/gallery/roof/roof_way.jpg",
+            "title": "Roof",
+            "desc": "Way To Roof"
+        },
+        {
+            "alt": "roof",
+            "src": "assets/img/gallery/roof/view_from_top1.jpg",
+            "title": "Roof",
+            "desc": "View from Top"
+        },
+        {
+            "alt": "roof",
+            "src": "assets/img/gallery/roof/view_from_top2.jpg",
+            "title": "Roof",
+            "desc": "View from Top"
+        },
+        {
+            "alt": "roof",
+            "src": "assets/img/gallery/roof/view_from_top3.jpg",
+            "title": "Roof",
+            "desc": "View from Top"
+        },
+        {
+            "alt": "roof",
+            "src": "assets/img/gallery/roof/view_from_top4.jpg",
+            "title": "Roof",
+            "desc": "View from Top"
+        },
+        {
+            "alt": "roof",
+            "src": "assets/img/gallery/roof/view_from_top5.jpg",
+            "title": "Roof",
+            "desc": "View from Top"
+        },
+        {
+            "alt": "roof",
+            "src": "assets/img/gallery/roof/view_from_top6.jpg",
+            "title": "Roof",
+            "desc": "View from Top"
+        }
+    ]
+}
